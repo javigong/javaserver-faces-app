@@ -4,11 +4,13 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Employee Data</title>
+        <title>Employee Data Output | JSF App by Javier Gongora</title>
     </h:head>
     <h:body>
-        Employee Name: #{obj.ename} <br />
-        Address: #{obj.address} <br />
-        Age: #{obj.address} <br />
+        Employee Name: #{getData.getEname()} <br />
+        Department: #{getData.department} <br />
+        Address: #{getData.getAddress()} <br />
+        Years of seniority: #{getData.seniority} <br />
+        Human Validation: #{getData.checkAnswer()}
     </h:body>
 </html>
