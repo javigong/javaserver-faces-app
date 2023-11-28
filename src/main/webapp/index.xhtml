@@ -4,18 +4,55 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
-        <title>Facelet Title</title>
+        <title>Employee Form | JSF App by Javier Gongora</title>
     </h:head>
     <h:body>
-
-        <f:view>
             <h:form>
-                Employee Name: <h:inputText id="ename" value="#{obj.ename}" /> <br/>
-                Address: <h:inputTextarea id="address" value="#{obj.address}" /> <br/>
-                Age: <h:inputText id="age" value="#{obj.age}" /> <br/>
-                <h:commandButton id="cmd" value="Submit Data" action="showData"/>
+                <table border="1" width="60%" align="center">
+                    <tr>
+                        <td colspan="2">
+                            Employee Name: <h:inputText id="ename" value="#{getData.ename}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           Departments: 
+                        </td>
+                        <td>
+                            <h:selectOneListbox id="department" value="#{getData.department}" size="4">
+                                <f:selectItem itemValue="a" itemLabel="Department A" />
+                                <f:selectItem itemValue="b" itemLabel="Department B" />
+                                <f:selectItem itemValue="c" itemLabel="Department C" />
+                                <f:selectItem itemValue="d" itemLabel="Department D" />
+                            </h:selectOneListbox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Address: <h:inputTextarea id="address" value="#{getData.address}" /> <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            Years of seniority: <h:inputText id="seniority" value="#{getData.seniority}" /> <br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Human Validation:
+                        </td>
+                        <td>
+                            <h:inputText id="numA" value="#{getData.numA}" /> + 
+                            <h:inputText id="numB" value="#{getData.numB}" /> = 
+                            #{getData.numC}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h:commandButton id="cmd" value="Submit" action="output.xhtml"/>   
+                        </td>
+                    </tr>
+                </table>
             </h:form>
-        </f:view>
-
     </h:body>
 </html>
