@@ -92,10 +92,6 @@ public class getData {
     public void setNumC(int numC) {
         this.numC = numC;
     }
-
-    /**
-     * Creates a new instance of getData
-     */
     
     public String checkAnswer () {
         if (numA + numB == numC) {
